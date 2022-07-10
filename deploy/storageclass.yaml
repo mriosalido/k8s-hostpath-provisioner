@@ -1,0 +1,13 @@
+---
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: k8s-hostpath-provisioner
+provisioner: cluster.local/k8s-hostpath-provisioner
+parameters:
+  namingStrategy: dynamic # or 'static' to use the PVC name without resource UUID 
+  onDelete: delete # or 'archive' to rename PV folder on delete to $PVC-archive 
+  subPath: default # sub folder name for this storage class. parent is defined in storage controller.
+reclaimPolicy: Delete
+allowVolumeExpansion: true
+volumeBindingMode: Immediate

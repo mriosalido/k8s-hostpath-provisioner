@@ -29,7 +29,7 @@ import (
 )
 
 const (
-	ProvisionerName = "cluster.local/hostpath-provisioner"
+	ProvisionerName = "cluster.local/k8s-hostpath-provisioner"
 	annSelectedNode = "volume.kubernetes.io/selected-node"
 	annAlphaSelectedNode = "volume.alpha.kubernetes.io/selected-node"
 )
